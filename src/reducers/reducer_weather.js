@@ -3,7 +3,7 @@ export default function(state=[],action){
 	switch(action.type){
 		case FETCH_WEATHER:
 			console.log("Action: " , action.payload.data);
-			return [action.payload.data, ...state];
+			return [...state, action.payload.data];
 			break;
 		default:
 			return state;
